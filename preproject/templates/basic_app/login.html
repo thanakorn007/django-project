@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+  <title>Precision driving observation system by GNSS technology</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+  
+  <style>
+  body,h1 {font-family: "Raleway", sans-serif}
+  body, html {height: 100%}
+  .bgimg {
+    background-image: url('https://wallpapercave.com/wp/wp2780898.jpg');
+    min-height: 100%;
+    background-position: center;
+    background-size: cover;
+  }
+  </style>
+  <body>
+
+    <div class="bgimg w3-display-container w3-animate-opacity w3-text-white">
+      <div class="w3-display-topleft w3-padding-large w3-xlarge">
+      Precision driving observation system by GNSS technology
+    </div>
+    <div class="w3-display-middle">
+      <h1 class="w3-jumbo w3-animate-top">LOG IN</h1>
+      <hr class="w3-border-grey" style="margin:auto;width:40%">
+
+    <form align="center" class="emailform" action="{% url 'user_login' %}" method="POST">
+      {% csrf_token %}
+      <label for="username">Username: </label><br>
+      <input class="userinput" type="text" name="username" ><br>
+
+      <label for="password">Password: </label><br>
+      <input class="userinput" type="password" name="password" ><br><br><br>
+
+      <span class="w3-black">
+      <input type="submit" id="sub" name="" value="Login!"></span>
+    </form>
+
+
+  </div>
+  <div class="w3-display-bottomleft w3-padding-large">
+    King Mongkut's Institute of Technology Ladkrabang
+  </div>
+  <div class="w3-display-bottomright w3-padding-large">
+    <a href="{% url 'basic_app:register'%}">Register</a>
+  </div>
+
+
+  </div>
+  <style media="screen">
+  #sub{
+    border-radius: 25px;
+    background: #FF9F1C;
+    height: 60px;
+    width: 120px;
+    font-family: "Montserrat";
+    font-size: 1.2em;
+    margin-bottom: 4px;
+  }
+
+  </style>
+</body>
+</html>
